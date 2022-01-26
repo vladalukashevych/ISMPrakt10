@@ -8,6 +8,24 @@ namespace University
 {
     public class LibraryUser : Student
     {
-        
+        protected string LibraryCardNumber { set; get; }
+        protected DateTime DateOfIssue { set; get; }
+        protected float MonthlyContribution { set; get; }
+
+        public LibraryUser(string firstName, string lastName, DateTime dateOfBirth, int grade, string group,
+            string faculty, string educationalInstitution, string libraryCardNumber, DateTime dateOfIssue,
+            float monthlyContribution) : base(firstName, lastName, dateOfBirth, grade, group, faculty,
+                educationalInstitution)
+        {
+            LibraryCardNumber = libraryCardNumber;
+            DateOfIssue = dateOfIssue;
+            MonthlyContribution = monthlyContribution;
+        }
+
+        public double GetGeneralContribution()
+        {
+            TimeSpan timeOfMembership = DateTime.Now - DateOfIssue;
+            return ((int)(timeOfMembership.TotalDays / 30.416)) * MonthlyContribution;
+        }
     }
 }
