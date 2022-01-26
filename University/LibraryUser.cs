@@ -25,7 +25,7 @@ namespace University
         public double GetGeneralContribution()
         {
             TimeSpan timeOfMembership = DateTime.Now - DateOfIssue;
-            return ((int)(timeOfMembership.TotalDays / 30.416)) * MonthlyContribution;
+            return Math.Round(((int)(timeOfMembership.TotalDays / 30.416)) * MonthlyContribution,2);
         }
     }
 }
