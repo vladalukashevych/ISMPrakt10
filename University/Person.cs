@@ -12,6 +12,13 @@ namespace University
         protected string LastName { set; get; }
         protected DateTime DateOfBirth { set; get; }
 
+        public Person()
+        {
+            FirstName = "none";
+            LastName = "none";
+            DateOfBirth = new DateTime();
+        }
+
         public Person(string firstName, string lastName, DateTime dateOfBirth)
         {
             FirstName = firstName;
