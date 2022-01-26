@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace University
 {
-    class Student : Person
+    public class Student : Person
     {
         protected int Grade { set; get; }
         protected string Group { set; get; }

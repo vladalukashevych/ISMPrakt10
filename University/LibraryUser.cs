@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace University
 {
-    class LibraryUser
+    public class LibraryUser : Student
     {
+        
     }
 }
