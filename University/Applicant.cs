@@ -12,7 +12,7 @@ namespace University
         protected int ZNOUkrainianScore { set; get; }
         protected int ZNOOptionalScore { set; get; }
         protected float SchoolCertificateGrade { set; get; }
-        protected string SchoolName;
+        protected string SchoolName { set; get; }
 
         public Applicant() : base()
         {
