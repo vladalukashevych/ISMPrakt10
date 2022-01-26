@@ -34,9 +34,10 @@ namespace University
             SchoolName = schoolName;
         }
 
-        public double GetCompetetiveScore(float mathCoefficient, float ukraineanCoefficient, float optionalCoefficient)
+        public double GetCompetetiveScore(float mathCoefficient, float ukraineanCoefficient, 
+            float optionalCoefficient, float schoolCertificateCoefficient)
         {
-            return ZNOMathScore * mathCoefficient + ZNOUkrainianScore * ukraineanCoefficient + ZNOOptionalScore * optionalCoefficient;
+            return ZNOMathScore * mathCoefficient + ZNOUkrainianScore * ukraineanCoefficient + ZNOOptionalScore * optionalCoefficient + SchoolCertificateGrade * schoolCertificateCoefficient;
         }
     }
 }
