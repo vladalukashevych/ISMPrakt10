@@ -10,11 +10,11 @@ namespace University
     {
         protected string LibraryCardNumber { set; get; }
         protected DateTime DateOfIssue { set; get; }
-        protected float MonthlyContribution { set; get; }
+        protected double MonthlyContribution { set; get; }
 
         public LibraryUser(string firstName, string lastName, DateTime dateOfBirth, int grade, string group,
             string faculty, string educationalInstitution, string libraryCardNumber, DateTime dateOfIssue,
-            float monthlyContribution) : base(firstName, lastName, dateOfBirth, grade, group, faculty,
+            double monthlyContribution) : base(firstName, lastName, dateOfBirth, grade, group, faculty,
                 educationalInstitution)
         {
             LibraryCardNumber = libraryCardNumber;

@@ -11,7 +11,7 @@ namespace University
         protected int ZNOMathScore { set; get; }
         protected int ZNOUkrainianScore { set; get; }
         protected int ZNOOptionalScore { set; get; }
-        protected float SchoolCertificateGrade { set; get; }
+        protected double SchoolCertificateGrade { set; get; }
         protected string SchoolName { set; get; }
 
         public Applicant() : base()
@@ -24,7 +24,7 @@ namespace University
         }
 
         public Applicant(string firstName, string lastName, DateTime dateOfBirth, int znoMathScore, 
-            int znoUkrainianScore, int znoOptionalScore, float schoolCertificateGrade, string schoolName) 
+            int znoUkrainianScore, int znoOptionalScore, double schoolCertificateGrade, string schoolName) 
             : base(firstName, lastName, dateOfBirth)
         {
             ZNOMathScore = znoMathScore;
@@ -34,10 +34,10 @@ namespace University
             SchoolName = schoolName;
         }
 
-        public double GetCompetetiveScore(float mathCoefficient, float ukraineanCoefficient, 
-            float optionalCoefficient, float schoolCertificateCoefficient)
+        public double GetCompetetiveScore(double mathCoefficient, double ukraineanCoefficient, 
+            double optionalCoefficient, double schoolCertificateCoefficient)
         {
-            return ZNOMathScore * mathCoefficient + ZNOUkrainianScore * ukraineanCoefficient + ZNOOptionalScore * optionalCoefficient + SchoolCertificateGrade * schoolCertificateCoefficient;
+            return Math.Round(ZNOMathScore * mathCoefficient + ZNOUkrainianScore * ukraineanCoefficient + ZNOOptionalScore * optionalCoefficient + SchoolCertificateGrade * schoolCertificateCoefficient,2);
         }
     }
 }
